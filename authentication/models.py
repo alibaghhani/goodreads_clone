@@ -9,7 +9,7 @@ class User(AbstractUser):
     is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['admin_name']
+    REQUIRED_FIELDS = ['email']
 
     def save(self, *args, **kwargs):
         if self.is_superuser == False:
