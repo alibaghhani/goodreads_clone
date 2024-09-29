@@ -9,8 +9,6 @@ class BookSerializer(ModelSerializer):
 
 
 class GenreSerializer(ModelSerializer):
-    books = BookSerializer(many=True, read_only=True)
-
     class Meta:
         model = Genre
         fields = ('id', 'name')
