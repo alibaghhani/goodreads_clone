@@ -1,0 +1,36 @@
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNzYwNDgzMSwiaWF0IjoxNzI3NTE4NDMxLCJqdGkiOiJkYjM3MTZhNDUzMDM0YTY3YjM3OWFmNGY2NjEyYTkzYiIsInVzZXJfaWQiOjR9.S-HavIvvFko-Q1AYrGjWYaoGX8RoI8T7Prk5K0FXdPI",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3NTE4NzMxLCJpYXQiOjE3Mjc1MTg0MzEsImp0aSI6IjE2NWY2MTEwMWMzMzRhYzhhMjE3MGI1MzQ0ZGU5ZjQxIiwidXNlcl9pZCI6NH0.b7b1-n7TTk_i7iLt0ZEtJfANN2X_zWBWH2LiGDagHF8"
+}
+
+
+
+
+
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNzYwNTA5MCwiaWF0IjoxNzI3NTE4NjkwLCJqdGkiOiI3ZTA3Yjk3OGMzYTE0ZjZkYjliMjY3OGI0ZTg3MjNhZSIsInVzZXJfaWQiOjR9.eZuMM8XQzGVWOkBO2hGLh7a6Xa1tXtenD9ea-squqaY",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3NTE4OTkwLCJpYXQiOjE3Mjc1MTg2OTAsImp0aSI6IjEwMWM1YzY4ZWZlYTRhNzg4ZWE3Mjg5ZmQ1MzE5OTM1IiwidXNlcl9pZCI6NH0.t6qgIZeRBQtEsEh5207UHxlwHKdlObG69OSvXBINilA"
+}
+
+
+    # def list(self, request):
+    #     queryset = Book.objects.all()
+    #     paginator = self.pagination_class()
+    #     page = paginator.paginate_queryset(queryset, request)
+    #     serializer = BookSerializer(page, many=True)
+    #     return Response(serializer.data)
+
+    # def create(self, request, *args, **kwargs):
+    #     serializer = BookSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=201)
+    #     return Response(serializer.errors, status=400)
+    #
+    # def retrieve(self, request, pk=None, *args, **kwargs):
+    #     queryset = Book.objects.all()
+    #     book = get_object_or_404(queryset, pk=pk)
+    #     serializer = BookSerializer(book)
+    #     return Response(serializer.data)
