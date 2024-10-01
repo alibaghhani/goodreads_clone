@@ -1,5 +1,5 @@
 
-#Django REST goodreads project
+# Django REST goodreads project
 
 This project is a clone of goodreads website with basic JWTauthentication
 
