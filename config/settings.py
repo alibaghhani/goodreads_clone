@@ -136,3 +136,12 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 }
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'API Key Header': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
+}
