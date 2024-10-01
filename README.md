@@ -38,7 +38,14 @@ If you have any feedback, please reach out to us at baghaniali2006@gmail.com
 To deploy this project without docker 
 
 ```bash
-  python manage.py runserver
+  python -m venv env #create virtual envoirement
+
+  source env/bin/activate  #active the venv
+
+  pip install -r requirements.txt #install dependencies
+
+  python manage.py runserver #run the django server
+  
 ```
 
 To deploy this project with nginx and docker
