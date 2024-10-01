@@ -1,9 +1,3 @@
-
-
-
-
-
-
 from django.contrib.auth.models import BaseUserManager
 
 
@@ -43,6 +37,3 @@ class UserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(email, username, admin_name, password, **extra_fields)
-
-
-

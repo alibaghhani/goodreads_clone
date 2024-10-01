@@ -15,6 +15,9 @@ from authentication.models import User
 
 
 class RegisterUserViewSet(ViewSet):
+    """
+    Register a new user.
+    """
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
