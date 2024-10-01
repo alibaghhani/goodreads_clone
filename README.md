@@ -38,11 +38,13 @@ If you have any feedback, please reach out to us at baghaniali2006@gmail.com
 To deploy this project without docker 
 
 ```bash
-  python -m venv env #create virtual envoirement
+  python3 -m venv venv # create virtual envoirement
 
-  source env/bin/activate  #active the venv
+  source env/bin/activate  # active the venv
 
-  pip install -r requirements.txt #install dependencies
+  pip3 install -r requirements.txt # install dependencies
+
+  python3 manage.py migrate # migrate migration files
 
   python manage.py runserver #run the django server
   
