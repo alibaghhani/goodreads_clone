@@ -11,7 +11,7 @@ from rest_framework_simplejwt.views import (
 
 router = DefaultRouter()
 router.register(
-    r'users',
+    r'register',
     RegisterUserViewSet,
     basename='register'
 )

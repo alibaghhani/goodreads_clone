@@ -33,8 +33,8 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api.authentication/', include('authentication.urls')),
-    path('api.library/', include('books.urls')),
+    path('api/authentication/', include('authentication.urls')),
+    path('api/library/', include('books.urls')),
 
     # swagger endpoints#
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
