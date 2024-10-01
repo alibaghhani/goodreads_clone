@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet, ModelViewSet
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from .pagination import CustomPagination
-from books.models import Book, Genre, Rate
+from books.models import Book, Genre, Rate, display_rates_and_rates_avg
 from books.serializers import BookSerializer, GenreSerializer, RateSerializer
 
 
@@ -62,6 +62,19 @@ class BooksViewSet(ModelViewSet):
                     return Response(rate_serializer.data, status=201)
             else:
                 return Response(rate_serializer.errors, status=400)
+
+    def retrieve(self, request, *args, **kwargs):
+        '''
+        This method returns a book with all its rates
+        '''
+        book_id = kwargs.get('pk')
+        queryset = Book.objects.all()
+        book = get_object_or_404(queryset, pk=book_id)
+        serializer = BookSerializer(book)
+        return Response({
+            'book': serializer.data,
+            'rates': display_rates_and_rates_avg(book_id)
+        })
 
 
 class GenreViewSet(BooksViewSet):

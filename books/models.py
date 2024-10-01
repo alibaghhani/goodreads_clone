@@ -1,5 +1,6 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.db.models import Avg
 
 from authentication.models import User
 from core.models import TimeStampMixin
@@ -51,3 +52,9 @@ class Rate(TimeStampMixin):
     ])
 
 
+def display_rates_and_rates_avg(book_id):
+    rates_avg = Rate.objects.filter(book=book_id).aggregate(avg=Avg('rate'))
+    rate_list = {}
+    for i in range(6):
+        rate_list[i] = Rate.objects.filter(book=1, rate=i).count()
+    return rate_list,rates_avg
